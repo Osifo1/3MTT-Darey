@@ -25,13 +25,13 @@ This project demonstrates a **real-time AI surveillance system** capable of dete
 #### 📦 Preprocessing:
 
 * Each frame is resized and normalized to fit the model's expected input.
-* Frame is converted from BGR to RGB before prediction.
+* Frame is converted before prediction.
 
 #### 🤖 Prediction:
 
 * The model outputs class probabilities.
 * The class with the highest confidence is selected.
-* If confidence exceeds the set **threshold (89%)**, it is considered a positive detection.
+* If confidence exceeds the set **threshold (97%)**, it is considered a positive detection.
 
 #### 🟩 On-Screen Feedback:
 
@@ -43,15 +43,15 @@ This project demonstrates a **real-time AI surveillance system** capable of dete
 
 #### 🧠 Cooldown Logic:
 
-* To prevent alert spam, a **cooldown window** of **5 minutes** is enforced between alerts.
+* To prevent alert spam, a **cooldown window** of **15 minutes** is enforced between alerts.
 
 #### 📸 Snapshot:
 
-* If a weapon is detected with high confidence, a **snapshot is taken** and saved locally in a `snapshots/` folder.
+* If a weapon is detected with high confidence, a **snapshot is taken** and saved.
 
 #### ☁️ Upload to Cloud:
 
-* The image is uploaded to **ImgBB** using its API.
+* The image is uploaded to **cloud** using its API.
 * The link to the image is retrieved.
 
 #### 📲 WhatsApp Alert:
@@ -96,8 +96,6 @@ This project demonstrates a **real-time AI surveillance system** capable of dete
 * **TensorFlow/Keras**
 * **OpenCV**
 * **Requests (for APIs)**
-* **CallMeBot API** (WhatsApp)
-* **ImgBB API** (Image hosting)
 
 ---
 
@@ -110,17 +108,7 @@ This project demonstrates a **real-time AI surveillance system** capable of dete
 
 ---
 
-## 🧠 Next Steps (Optional Enhancements)
-
-* Add support for **multiple weapon types**.
-* Send **SMS or email alerts** as backup.
-* Integrate with **IoT devices** (e.g., auto-door locks or alarms).
-* Add **GUI interface** using Streamlit or Tkinter.
-* Export detection logs to CSV or a database.
-
----
-
 ## 🧑‍💼 Stakeholder Summary
 
-This solution provides a **cost-effective, AI-driven home security system** using commodity hardware (webcam + PC) and free tools (WhatsApp, imgbb). It offers a practical, real-world use case for AI in community safety and smart home automation.
+This solution provides a **cost-effective, AI-driven home security system** using commodity hardware (webcam + PC) and other tools (WhatsApp). It offers a practical, real-world use case for AI in community safety and smart home automation.
 
